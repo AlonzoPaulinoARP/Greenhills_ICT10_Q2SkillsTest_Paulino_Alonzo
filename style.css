@@ -26,7 +26,7 @@ h3 {
     letter-spacing: 0.3px;
 }
 
-form {
+form, #output {
     background-color: rgba(30, 41, 59, 0.85);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -35,6 +35,10 @@ form {
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.1);
     width: 100%;
     max-width: 400px;
+    box-sizing: border-box;
+}
+
+form {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -72,3 +76,24 @@ input[type="button"] {
     border: none;
     border-radius: 8px;
     font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="button"]:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+#output {
+    margin-top: 24px;
+    color: #f8fafc;
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+#output:empty {
+    display: none;
+}
